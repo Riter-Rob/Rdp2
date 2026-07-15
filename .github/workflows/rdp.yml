@@ -1,0 +1,7 @@
+
+    - name: Create RDP User
+        run: |
+          $Password = ConvertTo-SecureString "P@ssw0rd!123" -AsPlainText -Force
+          New-LocalUser -Name "rdpadmin" -Password $Password -Description "RDP Admin"
+          Add-LocalGroupMember -Group "Administrators" -Member "rdpadmin"
+          Add-LocalGroupMember -Group "Remote Desktop Users" -Member "rdpadmin"
