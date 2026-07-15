@@ -1,4 +1,4 @@
-
+# Step 2: Create a dedicated RDP User Account
       - name: Create RDP User
         run: |
           $Password = ConvertTo-SecureString "P@ssw0rd!123" -AsPlainText -Force
